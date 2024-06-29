@@ -32,7 +32,7 @@ To start a debug session, use the following command:
 :DapStart
 ```
 
-Set breakpoints in your Julia code by using the following command in normal mode:
+Set breakpoints in your Julia code by using the following command:
 
 ```vim
 :DapToggleBreakpoint
