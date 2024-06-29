@@ -38,8 +38,6 @@ Set breakpoints in your Julia code by using the following command in normal mode
 :DapToggleBreakpoint
 ```
 
-To step forward in a debug session, use the following command:
-
 Control the debugging session with the following commands:
 
 - `:DapContinue` - Continue execution.
