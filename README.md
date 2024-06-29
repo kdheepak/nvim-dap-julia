@@ -58,7 +58,6 @@ return {
       "rcarriga/nvim-dap-ui",
       "theHamsta/nvim-dap-virtual-text",
       "nvim-neotest/nvim-nio",
-      "williamboman/mason.nvim",
       "kdheepak/nvim-dap-julia",
     },
     config = function()
