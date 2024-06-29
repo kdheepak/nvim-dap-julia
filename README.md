@@ -29,7 +29,7 @@ return {
 To start a debug session, use the following command:
 
 ```vim
-:DapStart
+:DapContinue
 ```
 
 Set breakpoints in your Julia code by using the following command:
