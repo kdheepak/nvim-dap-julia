@@ -45,7 +45,6 @@ Control the debugging session with the following commands:
 - `:DapStepInto` - Step into the current line.
 - `:DapStepOut` - Step out of the current function.
 - `:DapTerminate` - Terminate the debugging session.
-- `:DapToggleRepl` - Toggle the debugger repl.
 
 ### Advanced Setup
 
