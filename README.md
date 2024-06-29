@@ -4,6 +4,8 @@
 [Julia language debugger](https://github.com/julia-vscode/DebugAdapter.jl) with the
 [Neovim Debug Adapter Protocol (DAP) client](https://github.com/mfussenegger/nvim-dap).
 
+https://github.com/kdheepak/nvim-dap-julia/assets/1813121/54019d2a-2843-436a-80f1-b9d2d7f126dd
+
 ### Setup
 
 Using [`lazy.nvim`](https://github.com/folke/lazy.nvim):
