@@ -6,7 +6,6 @@ on:
     paths:
       - README.md # source file
       - .github/workflows/panvimdoc.yml # updates to this file itself
-workflow_dispatch:
 
 permissions:
   contents: write
