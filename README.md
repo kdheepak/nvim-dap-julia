@@ -24,6 +24,44 @@ return {
 }
 ```
 
+Here's the default configuration:
+
+```lua
+local nvim_dap_julia = require("nvim-dap-julia")
+nvim_dap_julia.setup({
+  configurations = {
+    julia = {
+      {
+        type = "julia",
+        name = "Debug julia executable",
+        request = "launch",
+        program = "${file}",
+        projectDir = "${workspaceFolder}",
+        juliaEnv = "${workspaceFolder}",
+        exitAfterTaskReturns = false,
+        debugAutoInterpretAllModules = false,
+        stopOnEntry = true,
+        args = {},
+      },
+    },
+  },
+  adapters = {
+    julia = {
+      type = "server",
+      port = "${port}",
+      executable = {
+        command = "julia",
+        args = { "--project=" .. nvim_dap_julia.get_plugin_root(), nvim_dap_julia.get_debugger_script(), "${port}" },
+      },
+      options = {
+        max_retries = 100,
+      },
+    },
+  },
+
+})
+```
+
 ### Usage
 
 To start a debug session, use the following command:
