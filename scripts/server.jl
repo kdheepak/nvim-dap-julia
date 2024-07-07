@@ -1,3 +1,6 @@
+using Pkg
+Pkg.instantiate()
+
 using Sockets
 using DebugAdapter
 using Logging
