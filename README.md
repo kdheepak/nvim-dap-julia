@@ -62,6 +62,40 @@ nvim_dap_julia.setup({
 })
 ```
 
+If you want to override a specific section, you can do that by passing the options to `setup({})`.
+
+For example, if you want to override `juliaEnv` to allow the user to pick options, you can setup a
+coroutine callback like so:
+
+```lua
+
+local juliaEnvCallback = function()
+  return coroutine.create(function(dap_run_co)
+    local items = {
+      [[ ${file}: Active filename ]],
+      [[ ${fileBasename}: The current file's basename ]],
+      [[ ${fileDirname}: The current file's dirname ]],
+      [[ ${relativeFile}: The current file relative to current working directory ]],
+      [[ ${workspaceFolder}: The current working directory of Neovim ]],
+      [[ ${workspaceFolderBasename}: The name of the folder opened in Neovim ]],
+    }
+    vim.ui.select(items, { label = "juliaEnv> " }, function(choice)
+      coroutine.resume(dap_run_co, choice)
+    end)
+  end)
+end
+
+local nvim_dap_julia = require("nvim-dap-julia")
+nvim_dap_julia.setup({
+  configurations = {
+    julia = {
+      juliaEnv = juliaEnvCallback
+    }
+  }
+})
+
+```
+
 ### Usage
 
 To start a debug session, use the following command:
